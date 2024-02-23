@@ -1,0 +1,13 @@
+@import './vars';
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: $body-color;
+  font-style: normal;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
