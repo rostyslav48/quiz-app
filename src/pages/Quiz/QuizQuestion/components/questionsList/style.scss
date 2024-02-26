@@ -1,0 +1,9 @@
+.options-list {
+  gap: 12px;
+  row-gap: 12px;
+  &__option {
+    &--single-select {
+      grid-column: 1 / -1;
+    }
+  }
+}

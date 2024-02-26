@@ -11,15 +11,17 @@ export interface Option {
 
 export interface Question {
   id: string;
-  locale: LocalizedString;
-  options: Option[];
   sequenceNumber: number;
+  locale: LocalizedString;
+  description: LocalizedString;
+  options: Option[];
+  type: string;
 }
 
 export interface QuizData {
   id: string;
-  type: string;
-  isMultipleAnswers: boolean;
+  img: string;
   title: LocalizedString;
+  description: LocalizedString;
   questions: Question[];
 }

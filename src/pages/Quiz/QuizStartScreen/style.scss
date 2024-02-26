@@ -1,0 +1,81 @@
+@import 'styles/utils/vars';
+@import 'styles/utils/mixins';
+
+.quiz-start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+
+  &__img {
+    max-height: 200px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    font-size: 26px;
+    color: $primary-color;
+  }
+
+  &__description {
+    font-size: 16px;
+    color: $secondary-color;
+  }
+
+  &__questions-number {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    width: 100%;
+    color: $secondary-color;
+    font-size: 16px;
+  }
+
+  &__start {
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: stretch;
+
+    &-button {
+      width: 100%;
+      background-color: $purple-accent;
+      padding: 16px;
+      border-radius: 50px;
+      color: $primary-color;
+      font-size: 17px;
+      font-weight: 800;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @include onDesktop {
+    &__title {
+      font-size: 30px;
+    }
+
+    &__description {
+      font-size: 18px;
+    }
+
+    &__questions-number {
+      font-size: 18px;
+    }
+
+    &__start {
+      position: relative;
+    }
+  }
+}

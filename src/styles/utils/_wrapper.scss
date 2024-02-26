@@ -1,6 +1,7 @@
 @import './mixins';
 
 .wrapper {
+  margin-block: 30px;
   margin-inline: 26px;
 
   @include onTablet {

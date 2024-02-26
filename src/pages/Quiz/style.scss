@@ -1,0 +1,29 @@
+@import 'styles/utils/vars';
+
+.quiz {
+  &__progress {
+    width: 100%;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__icon-progress {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__questionInfo {
+    font-size: 18px;
+    font-weight: 800;
+    color: $primary-color;
+
+    &--highlight {
+      color: $purple-accent;
+    }
+  }
+}

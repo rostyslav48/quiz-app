@@ -1,0 +1,46 @@
+@import 'styles/utils/mixins.scss';
+@import 'styles/utils/vars.scss';
+
+.quiz-card {
+  grid-column: span 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: $card-bg;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 20px;
+
+  &__img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $primary-color;
+  }
+
+  &__description {
+    @include text-ellipsis(150px, 6);
+    margin-top: 10px;
+    font-size: 12px;
+    color: $secondary-color;
+  }
+
+  @include onDesktop {
+    grid-column: span 3;
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__description {
+      font-size: 14px;
+    }
+  }
+}

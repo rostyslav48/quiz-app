@@ -7,10 +7,10 @@
   row-gap: 40px;
 
   @include onTablet {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
 
   @include onDesktop {
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(12, 1fr);
   }
 }

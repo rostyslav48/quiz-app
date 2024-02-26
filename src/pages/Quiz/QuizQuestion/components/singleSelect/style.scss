@@ -1,0 +1,14 @@
+@import 'styles/utils/vars';
+
+.single-select {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: $card-bg;
+  border-radius: 16px;
+
+  &__content {
+    font-size: 17px;
+    font-weight: 600;
+    color: $primary-color;
+  }
+}

@@ -1,5 +1,6 @@
 export enum QuestionTypes {
-  Rows = 'rows',
-  Cards = 'cards',
-  Circles = 'circles',
+  SingleSelect = 'single-select',
+  SingleSelectImage = 'single-select-image',
+  MultipleSelect = 'multiple-select',
+  Bubble = 'bubble',
 }
