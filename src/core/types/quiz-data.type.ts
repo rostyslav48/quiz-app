@@ -13,6 +13,7 @@ export interface Question {
   id: string;
   locale: LocalizedString;
   options: Option[];
+  sequenceNumber: number;
 }
 
 export interface QuizData {
