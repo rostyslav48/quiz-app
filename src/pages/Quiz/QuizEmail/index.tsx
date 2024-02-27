@@ -2,6 +2,7 @@ import { CustomLink } from 'core/shared/customLink';
 import './style.scss';
 import { useEffect, useState } from 'react';
 import { Routes, StorageKeys } from 'core/enums';
+import classnames from 'classnames';
 
 const EMAIL_PATTERN = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
@@ -39,7 +40,9 @@ export const QuizEmail = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Your Email"
           type="email"
-          className={`quiz-email__input ${isErrorShown && 'quiz-email__input-error'}`}
+          className={classnames('quiz-email__input', {
+            'quiz-email__input-error': isErrorShown,
+          })}
           required
         />
 

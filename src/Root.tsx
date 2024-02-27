@@ -8,6 +8,7 @@ import { QuizStartScreen } from './pages/Quiz/QuizStartScreen';
 import { QuizLoader } from './pages/Quiz/QuizLoader';
 import { Routes as RoutesEnum } from 'core/enums';
 import { QuizEmail } from './pages/Quiz/QuizEmail';
+import { QuizResults } from './pages/Quiz/QuizResults';
 
 export const Root = () => (
   <Router>
@@ -21,7 +22,7 @@ export const Root = () => (
           <Route index element={<QuizStartScreen />} />
           <Route path={RoutesEnum.QuizProcessing} element={<QuizLoader />} />
           <Route path={RoutesEnum.QuizEmail} element={<QuizEmail />} />
-          {/* <Route path="results" element={<Quiz />} /> */}
+          <Route path={RoutesEnum.QuizResults} element={<QuizResults />} />
           <Route
             path={`:${RoutesEnum.QuestionId}`}
             element={<QuizQuestion />}

@@ -54,6 +54,13 @@
   justify-content: center;
 }
 
+@mixin displayFlexColumnCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 @mixin text-ellipsis($maxHeight, $lines) {
   max-height: $maxHeight;
   line-clamp: $lines;

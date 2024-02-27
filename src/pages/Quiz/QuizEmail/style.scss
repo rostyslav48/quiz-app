@@ -1,17 +1,14 @@
 @import 'styles/utils/vars';
+@import 'styles/utils/mixins';
 
 .quiz-email {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include displayFlexColumnCenter;
+
   gap: 50px;
 
   &__header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include displayFlexColumnCenter;
+
     gap: 12px;
   }
 
@@ -19,7 +16,7 @@
     font-size: 30px;
     font-weight: 700;
     color: $primary-color;
-    margin-top: 72px;
+    margin-top: 45px;
   }
 
   &__subtitle {

@@ -31,26 +31,28 @@ export const Quiz = () => {
   const questionsQuantity = preparedQuizData.questions.length;
 
   return (
-    <main className="quiz wrapper">
-      {questionId && (
-        <div className="quiz__progress">
-          <div className="quiz__nav">
-            <Arrow onClick={handleBackClick} className="quiz__icon-progress" />
+    <div className="quiz wrapper">
+      <header className="quiz__progress">
+        <div className="quiz__nav">
+          <Arrow onClick={handleBackClick} className="quiz__icon-progress" />
+          {questionId && (
             <div>
               <span className="quiz__questionInfo quiz__questionInfo--highlight">
                 {questionId}
               </span>
               <span className="quiz__questionInfo">{`/${questionsQuantity}`}</span>
             </div>
+          )}
 
-            <Menu className="quiz__icon-progress" />
-          </div>
+          <Menu className="quiz__icon-progress visib--h" />
+        </div>
+        {questionId && (
           <LineProgressBar
             progress={convertToPercents(+questionId, questionsQuantity)}
           />
-        </div>
-      )}
+        )}
+      </header>
       <Outlet context={preparedQuizData} />
-    </main>
+    </div>
   );
 };
