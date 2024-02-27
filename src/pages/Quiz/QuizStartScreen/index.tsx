@@ -3,11 +3,16 @@ import { getTranslatedData } from 'core/helpers';
 import { QuizData } from 'core/types/quiz-data.type';
 
 import './style.scss';
+import { StorageKeys } from 'core/enums';
 
 export const QuizStartScreen = () => {
   const context: QuizData = useOutletContext();
   const { img, title, description, questions } = context;
-  const firstQuestionId = questions[0].id;
+  const firstQuestion = questions[0].sequenceNumber;
+
+  const handleTestReset = () => {
+    localStorage.removeItem(StorageKeys.Test);
+  };
 
   return (
     <div className="quiz-start-screen">
@@ -28,7 +33,11 @@ export const QuizStartScreen = () => {
       </div>
 
       <div className="quiz-start-screen__start">
-        <Link className="quiz-start-screen__start-button" to={firstQuestionId}>
+        <Link
+          onClick={handleTestReset}
+          className="quiz-start-screen__start-button"
+          to={firstQuestion.toString()}
+        >
           Start Quiz
         </Link>
       </div>

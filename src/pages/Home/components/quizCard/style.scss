@@ -2,6 +2,7 @@
 @import 'styles/utils/vars.scss';
 
 .quiz-card {
+  @include defaultHover;
   grid-column: span 4;
   display: flex;
   justify-content: center;

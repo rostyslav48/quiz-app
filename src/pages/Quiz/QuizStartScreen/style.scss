@@ -49,6 +49,7 @@
     justify-content: stretch;
 
     &-button {
+      @include defaultHover;
       width: 100%;
       background-color: $purple-accent;
       padding: 16px;

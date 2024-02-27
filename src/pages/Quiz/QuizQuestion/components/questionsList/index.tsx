@@ -1,28 +1,49 @@
 import { FC } from 'react';
-import { Option } from 'core/types/quiz-data.type';
-import { QuestionTypes } from 'core/enums';
+import { Option, Question } from 'core/types/quiz-data.type';
+import { QuestionTypes, Routes } from 'core/enums';
 import { SingleSelect } from '../singleSelect';
 
 import './style.scss';
+import { saveAnswerToStore } from 'core/helpers';
+import { useNavigate } from 'react-router-dom';
 
 type Props = {
-  options: Option[];
-  questionType: string;
-  handleClick: () => void;
+  question: Question;
+  questionsCount: number;
 };
 
-export const QuestionsList: FC<Props> = ({
-  options,
-  questionType,
-  handleClick,
-}) => {
+export const QuestionsList: FC<Props> = ({ question, questionsCount }) => {
+  const navigate = useNavigate();
+
+  const {
+    options,
+    id: questionId,
+    locale,
+    type: questionType,
+    sequenceNumber,
+  } = question;
+
+  const goToNextQuestion = () => {
+    const path =
+      questionsCount === sequenceNumber
+        ? Routes.QuizResults
+        : (sequenceNumber + 1).toString();
+
+    navigate(`../${path}`);
+  };
+
+  const handleSingleSelect = (option: Option) => {
+    saveAnswerToStore(questionId, locale, [option]);
+    goToNextQuestion();
+  };
+
   switch (questionType) {
     case QuestionTypes.SingleSelect:
       return (
-        <ul className="options-list grid">
+        <ul className="options-list--single-select">
           {options.map((option) => (
-            <li className="options-list__option--single-select">
-              <SingleSelect option={option} handleClick={handleClick} />
+            <li key={option.id} className="options-list__option--single-select">
+              <SingleSelect option={option} handleClick={handleSingleSelect} />
             </li>
           ))}
         </ul>

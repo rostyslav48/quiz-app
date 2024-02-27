@@ -1,8 +1,10 @@
 @import 'styles/utils/vars';
+@import 'styles/utils/mixins';
 
 .single-select {
+  @include smallHover;
   width: 100%;
-  padding: 12px 20px;
+  padding: 21px 20px;
   background-color: $card-bg;
   border-radius: 16px;
 

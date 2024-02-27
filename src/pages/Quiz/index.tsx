@@ -8,6 +8,8 @@ import Menu from 'icons/menu-icon.svg?react';
 
 import './style.scss';
 import { LineProgressBar } from 'core/shared/lineProgressBar';
+import { languagePickQuestion } from 'core/constants/lanquage-pick-question';
+import { convertToPercents } from 'core/helpers';
 
 export const Quiz = () => {
   const navigate = useNavigate();
@@ -22,7 +24,11 @@ export const Quiz = () => {
     navigate(-1);
   };
 
-  const questionsQuantity = currentQuizData.questions.length;
+  const preparedQuizData = {
+    ...currentQuizData,
+    questions: [languagePickQuestion, ...currentQuizData.questions],
+  };
+  const questionsQuantity = preparedQuizData.questions.length;
 
   return (
     <main className="quiz wrapper">
@@ -39,10 +45,12 @@ export const Quiz = () => {
 
             <Menu className="quiz__icon-progress" />
           </div>
-          <LineProgressBar progress={12} />
+          <LineProgressBar
+            progress={convertToPercents(+questionId, questionsQuantity)}
+          />
         </div>
       )}
-      <Outlet context={currentQuizData} />
+      <Outlet context={preparedQuizData} />
     </main>
   );
 };

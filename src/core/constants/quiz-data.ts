@@ -18,46 +18,59 @@ export const quizData: QuizData[] = [
     },
     questions: [
       {
-        id: '1',
-        sequenceNumber: 1,
+        id: 'question-2',
+        sequenceNumber: 2,
         type: 'single-select',
         locale: {
-          en: 'How old are you?',
-          de: 'Кіко тобі років?',
+          en: 'What is class in the CSS?',
+          de: 'Was ist eine Klasse in CSS?',
+          es: '¿Qué es una clase en CSS?',
+          fr: "Qu'est-ce que la classe en CSS?",
         },
         description: {
-          en: 'Choose one correct answer',
+          en: 'Choose the correct answer',
+          de: 'Wählen Sie die richtige Antwort aus',
+          es: 'Elige la respuesta correcta',
+          fr: 'Choisissez la réponse correcte',
         },
         options: [
           {
             id: 'option-1',
             locale: {
-              en: 'eleven',
-              de: 'Одинадцять',
+              en: 'A dog',
+              de: 'Ein Hund',
+              es: 'Un perro',
+              fr: 'Un chien',
             },
             isCorrect: false,
           },
           {
             id: 'option-2',
             locale: {
-              en: 'eleven',
-              de: 'Одинадцять',
+              en: 'A unique styling feature',
+              de: 'Ein einzigartiges Styling-Merkmal',
+              es: 'Una característica de estilo única',
+              fr: 'Une caractéristique de style unique',
             },
             isCorrect: true,
           },
           {
             id: 'option-3',
             locale: {
-              en: 'eleven',
-              de: 'Одинадцять',
+              en: "I don't know",
+              de: 'Ich weiß es nicht',
+              es: 'No lo sé',
+              fr: 'Je ne sais pas',
             },
             isCorrect: false,
           },
           {
             id: 'option-4',
             locale: {
-              en: 'eleven',
-              de: 'Одинадцять',
+              en: 'A part of programming language',
+              de: 'Ein Teil der Programmiersprache',
+              es: 'Una parte del lenguaje de programación',
+              fr: 'Une partie du langage de programmation',
             },
             isCorrect: false,
           },

@@ -3,5 +3,8 @@ export enum Routes {
   Quiz = 'quiz',
   QuizId = 'quizId',
   QuestionId = 'questionId',
+  QuizResults = 'results',
+  QuizEmail = 'email',
+  QuizThankYou = 'thank-you',
   NotFound = '/*',
 }

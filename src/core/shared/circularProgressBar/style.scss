@@ -1,0 +1,31 @@
+@import 'styles/utils/vars';
+
+.circular-progress {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &__background {
+    fill: none;
+    stroke: $primary-color;
+    stroke-width: 12px;
+  }
+
+  &__progress {
+    fill: none;
+    stroke: $purple-accent;
+    stroke-width: 12px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &__description {
+    color: $primary-color;
+    font-size: 52px;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

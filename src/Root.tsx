@@ -5,6 +5,7 @@ import { QuizQuestion } from './pages/Quiz/QuizQuestion';
 import { NotFound } from './pages/NotFound';
 import { Quiz } from './pages/Quiz';
 import { QuizStartScreen } from './pages/Quiz/QuizStartScreen';
+import { QuizResults } from './pages/Quiz/QuizResults';
 
 export const Root = () => (
   <Router>
@@ -13,6 +14,7 @@ export const Root = () => (
         <Route index element={<Home />} />
         <Route path="quiz/:quizId" element={<Quiz />}>
           <Route index element={<QuizStartScreen />} />
+          <Route path="results" element={<QuizResults />} />
           <Route path=":questionId" element={<QuizQuestion />} />
         </Route>
         <Route path="*" element={<NotFound />} />

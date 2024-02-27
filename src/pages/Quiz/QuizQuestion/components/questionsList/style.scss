@@ -1,6 +1,11 @@
 .options-list {
-  gap: 12px;
-  row-gap: 12px;
+  &--single-select {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    row-gap: 12px;
+  }
+
   &__option {
     &--single-select {
       grid-column: 1 / -1;
