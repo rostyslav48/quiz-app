@@ -31,16 +31,20 @@
 }
 
 @mixin defaultHover {
-  transition: transform $transition-duration;
-  &:hover {
-    transform: scale(1.1);
+  @include onDesktop {
+    transition: transform $transition-duration;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
 @mixin smallHover {
-  transition: transform $transition-duration;
-  &:hover {
-    transform: scale(1.05);
+  @include onDesktop {
+    transition: transform $transition-duration;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 

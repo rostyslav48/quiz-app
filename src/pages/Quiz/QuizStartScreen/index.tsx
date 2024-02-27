@@ -1,9 +1,10 @@
-import { Link, useOutletContext } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 import { getTranslatedData } from 'core/helpers';
 import { QuizData } from 'core/types/quiz-data.type';
 
 import './style.scss';
 import { StorageKeys } from 'core/enums';
+import { CustomLink } from 'core/shared/customLink';
 
 export const QuizStartScreen = () => {
   const context: QuizData = useOutletContext();
@@ -32,15 +33,11 @@ export const QuizStartScreen = () => {
         </div>
       </div>
 
-      <div className="quiz-start-screen__start">
-        <Link
-          onClick={handleTestReset}
-          className="quiz-start-screen__start-button"
-          to={firstQuestion.toString()}
-        >
-          Start Quiz
-        </Link>
-      </div>
+      <CustomLink
+        handleClick={handleTestReset}
+        to={firstQuestion.toString()}
+        text="Start Quiz"
+      />
     </div>
   );
 };

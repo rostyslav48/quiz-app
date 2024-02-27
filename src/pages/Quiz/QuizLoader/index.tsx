@@ -6,7 +6,7 @@ import { Routes } from 'core/enums';
 
 const CIRCLE_WIDTH = 252;
 
-export const QuizResults = () => {
+export const QuizLoader = () => {
   const navigate = useNavigate();
   const [percentage, setPercentage] = useState(0);
   const percentageIntervalRef = useRef<null | number>(null);
@@ -29,9 +29,9 @@ export const QuizResults = () => {
   }, [percentage]);
 
   return (
-    <div className="quiz-results">
+    <div className="quiz-loader">
       <CircularProgressBar percentage={percentage} circleWidth={CIRCLE_WIDTH} />
-      <h3 className="quiz-results__title">Finding collections for you...</h3>
+      <h3 className="quiz-loader__title">Finding collections for you...</h3>
     </div>
   );
 };

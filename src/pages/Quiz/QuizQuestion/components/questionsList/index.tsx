@@ -26,7 +26,7 @@ export const QuestionsList: FC<Props> = ({ question, questionsCount }) => {
   const goToNextQuestion = () => {
     const path =
       questionsCount === sequenceNumber
-        ? Routes.QuizResults
+        ? Routes.QuizProcessing
         : (sequenceNumber + 1).toString();
 
     navigate(`../${path}`);

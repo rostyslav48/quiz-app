@@ -5,6 +5,6 @@ export enum Routes {
   QuestionId = 'questionId',
   QuizResults = 'results',
   QuizEmail = 'email',
-  QuizThankYou = 'thank-you',
+  QuizProcessing = 'loading',
   NotFound = '/*',
 }

@@ -1,0 +1,81 @@
+@import 'styles/utils/vars';
+
+.quiz-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: $primary-color;
+    margin-top: 72px;
+  }
+
+  &__subtitle {
+    font-size: 17px;
+    font-weight: 400;
+    color: $secondary-color;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  &__input {
+    transition: outline-color $transition-duration ease-out;
+    padding: 21px 20px;
+    color: $primary-color;
+    background-color: $card-bg;
+    border: none;
+    border-radius: 16px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    &::placeholder {
+      color: $secondary-color;
+    }
+    &:focus {
+      outline: solid $purple-accent;
+    }
+
+    &-error {
+      outline: solid $red;
+
+      &:focus {
+        outline-color: $red;
+      }
+    }
+  }
+
+  &__error {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: $red;
+  }
+
+  &__policy {
+    max-width: 260px;
+    font-size: 12px;
+    font-weight: 500;
+    color: $secondary-color;
+    text-align: center;
+
+    &-link {
+      color: $purple-accent;
+    }
+  }
+}
