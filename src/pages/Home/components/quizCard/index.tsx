@@ -19,6 +19,7 @@ export const QuizCard: FC<Props> = ({ quizData }) => {
         alt={getTranslatedData(title)}
         className="quiz-card__img"
       />
+
       <div className="quiz-card__content">
         <h3 className="quiz-card__title">{getTranslatedData(title)}</h3>
         <p className="quiz-card__description">

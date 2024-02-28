@@ -11,7 +11,7 @@ export const QuizLoader = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [percentage, setPercentage] = useState(0);
-  const percentageIntervalRef = useRef<null | number>(null);
+  const percentageIntervalRef = useRef<null | NodeJS.Timeout>(null);
 
   useEffect(() => {
     percentageIntervalRef.current = setInterval(() => {
@@ -19,13 +19,15 @@ export const QuizLoader = () => {
     }, 50);
 
     return () => {
-      clearInterval(percentageIntervalRef.current as number);
+      if (percentageIntervalRef.current) {
+        clearInterval(percentageIntervalRef.current);
+      }
     };
   }, []);
 
   useEffect(() => {
-    if (percentage >= 100) {
-      clearInterval(percentageIntervalRef.current as number);
+    if (percentage >= 100 && percentageIntervalRef.current) {
+      clearInterval(percentageIntervalRef.current);
       navigate(`../${Routes.QuizEmail}`);
     }
   }, [percentage]);
