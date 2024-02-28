@@ -41,9 +41,9 @@
 
 @mixin smallHover {
   @include onDesktop {
-    transition: transform $transition-duration;
+    transition: filter $transition-duration;
     &:hover {
-      transform: scale(1.05);
+      filter: brightness(120%);
     }
   }
 }

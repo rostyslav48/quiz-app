@@ -3,6 +3,7 @@
 
 .bubble-select {
   @include displayFlexColumnCenter;
+  @include defaultHover;
   gap: 5px;
   padding: 8px 20px;
   background-color: $card-bg;
@@ -11,7 +12,7 @@
   width: 100%;
 
   &--active {
-    border: solid 1px $purple-accent;
+    border: solid 2px $purple-accent;
   }
 
   &__img {
@@ -29,7 +30,7 @@
 
   @include onTablet {
     &__description {
-      font-size: 17px;
+      font-size: 14px;
     }
   }
 }

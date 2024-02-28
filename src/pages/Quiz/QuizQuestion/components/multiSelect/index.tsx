@@ -2,6 +2,7 @@ import { Option } from 'core/types/quiz-data.type';
 import { getTestTranslation } from 'core/helpers';
 import { FC } from 'react';
 import { CustomCheckbox } from 'core/shared/customCheckbox';
+import classnames from 'classnames';
 
 import './style.scss';
 
@@ -21,7 +22,11 @@ export const MultiSelect: FC<Props> = ({
 
   const handleCheckboxClick = () => handleClick(option);
   return (
-    <div className="multi-select">
+    <div
+      className={classnames('multi-select', {
+        'multi-select--active': isChecked,
+      })}
+    >
       <p className="multi-select__content">{getTestTranslation(locale)}</p>
       <CustomCheckbox isChecked={isChecked} handleClick={handleCheckboxClick} />
     </div>

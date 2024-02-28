@@ -19,7 +19,7 @@ export const QuizQuestion = () => {
   }
 
   const questionsCount = context.questions.length;
-  const { locale, description } = question;
+  const { locale, description, id } = question;
 
   return (
     <div className="quiz-question">
@@ -30,7 +30,11 @@ export const QuizQuestion = () => {
         </p>
       </div>
 
-      <QuestionsList questionsCount={questionsCount} question={question} />
+      <QuestionsList
+        key={id}
+        questionsCount={questionsCount}
+        question={question}
+      />
     </div>
   );
 };
