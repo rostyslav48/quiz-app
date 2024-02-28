@@ -5,7 +5,6 @@ export type LocalizedString = {
 export interface Option {
   id: string;
   locale: LocalizedString;
-  isCorrect: boolean;
   img?: string;
 }
 

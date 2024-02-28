@@ -33,7 +33,7 @@ export const QuestionsList: FC<Props> = ({ question, questionsCount }) => {
   };
 
   const handleSingleSelect = (option: Option) => {
-    saveAnswerToStore(questionId, locale, [option]);
+    saveAnswerToStore(questionId, locale, questionType, [option]);
     goToNextQuestion();
   };
 

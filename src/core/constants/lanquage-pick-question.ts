@@ -16,28 +16,24 @@ export const languagePickQuestion: Question = {
       locale: {
         en: 'English',
       },
-      isCorrect: true,
     },
     {
       id: 'fr',
       locale: {
         en: 'French',
       },
-      isCorrect: true,
     },
     {
       id: 'de',
       locale: {
         en: 'German',
       },
-      isCorrect: true,
     },
     {
       id: 'es',
       locale: {
         en: 'Spanish',
       },
-      isCorrect: true,
     },
   ],
 };

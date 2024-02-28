@@ -1,22 +1,23 @@
 import { StorageKeys } from 'core/enums';
-import { Option, LocalizedString } from 'core/types/quiz-data.type';
+import { Option, LocalizedString } from 'core/types';
 import { getTestTranslation } from '.';
+import { Test } from 'core/types';
 
 export const saveAnswerToStore = (
   questionId: string,
   questionLocale: LocalizedString,
+  questionType: string,
   selectedOptions: Option[],
 ) => {
   const testRaw = localStorage.getItem(StorageKeys.Test);
-  const test = testRaw ? JSON.parse(testRaw) : {};
+  const test: Test = testRaw ? JSON.parse(testRaw) : {};
 
   const preparedData = {
     question: getTestTranslation(questionLocale),
-    selectedOptions: selectedOptions.map((option) => ({
-      id: option.id,
-      answer: getTestTranslation(option.locale),
-      isCorrect: option.isCorrect,
-    })),
+    questionType,
+    selectedOptions: selectedOptions.map(({ locale }) =>
+      getTestTranslation(locale),
+    ),
   };
 
   test[questionId] = preparedData;

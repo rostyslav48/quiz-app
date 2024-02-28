@@ -42,7 +42,6 @@ export const quizData: QuizData[] = [
               es: 'Un perro',
               fr: 'Un chien',
             },
-            isCorrect: false,
           },
           {
             id: 'option-2',
@@ -52,7 +51,6 @@ export const quizData: QuizData[] = [
               es: 'Una característica de estilo única',
               fr: 'Une caractéristique de style unique',
             },
-            isCorrect: true,
           },
           {
             id: 'option-3',
@@ -62,7 +60,6 @@ export const quizData: QuizData[] = [
               es: 'No lo sé',
               fr: 'Je ne sais pas',
             },
-            isCorrect: false,
           },
           {
             id: 'option-4',
@@ -72,7 +69,6 @@ export const quizData: QuizData[] = [
               es: 'Una parte del lenguaje de programación',
               fr: 'Une partie du langage de programmation',
             },
-            isCorrect: false,
           },
         ],
       },
