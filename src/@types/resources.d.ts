@@ -8,6 +8,7 @@ interface Resources {
       "p3": "and",
       "p4": "Terms of use"
     },
+    "notFound": "Not Found",
     "quizResults": {
       "thank-you": {
         "p1": "Thank You",

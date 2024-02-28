@@ -1,0 +1,54 @@
+@import 'styles/utils/mixins';
+@import 'styles/utils/vars';
+
+.not-found {
+  @include displayFlexColumnCenter;
+  gap: 20px;
+
+  &__content {
+    @include displayFlexColumnCenter;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__icon {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 30px;
+    color: $primary-color;
+    font-weight: 700;
+  }
+
+  &__link {
+    @include defaultHover;
+    padding: 16px;
+    border-radius: 50px;
+    font-size: 17px;
+    background-color: $purple-accent;
+    color: $primary-color;
+    gap: 5px;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @include onDesktop {
+    &__title {
+      font-size: 60px;
+    }
+  }
+}
