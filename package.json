@@ -11,7 +11,6 @@
     "interface": "i18next-resources-for-ts interface -i ./src/locales/en -o ./src/@types/resources.d.ts"
   },
   "dependencies": {
-    "@types/react-csv": "^1.1.10",
     "classnames": "^2.5.1",
     "i18next-http-backend": "^2.5.0",
     "i18next-resources-for-ts": "^1.5.0",
@@ -24,6 +23,8 @@
     "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {
+    "@types/node": "^20.11.21",
+    "@types/react-csv": "^1.1.10",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.0.2",

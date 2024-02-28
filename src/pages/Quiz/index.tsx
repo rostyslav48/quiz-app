@@ -1,20 +1,27 @@
 import { quizData } from 'core/constants/quiz-data';
 import { Routes } from 'core/enums';
 import { Navigate, Outlet, useNavigate, useParams } from 'react-router-dom';
+import { LineProgressBar } from 'core/shared/lineProgressBar';
+import { languagePickQuestion } from 'core/constants/lanquage-pick-question';
+import { convertToPercents, getTestLanguage } from 'core/helpers';
+import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 // Icons
 import Arrow from 'icons/arrow-icon.svg?react';
 import Menu from 'icons/menu-icon.svg?react';
 
 import './style.scss';
-import { LineProgressBar } from 'core/shared/lineProgressBar';
-import { languagePickQuestion } from 'core/constants/lanquage-pick-question';
-import { convertToPercents } from 'core/helpers';
 
 export const Quiz = () => {
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
   const { [Routes.QuizId]: id, [Routes.QuestionId]: questionId } = useParams();
   const currentQuizData = quizData.find((quiz) => quiz.id === id);
+
+  useEffect(() => {
+    i18n.changeLanguage(getTestLanguage());
+  }, []);
 
   if (!currentQuizData) {
     return <Navigate to={Routes.NotFound} />;
