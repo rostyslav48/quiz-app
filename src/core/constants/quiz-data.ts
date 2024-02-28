@@ -72,6 +72,62 @@ export const quizData: QuizData[] = [
           },
         ],
       },
+
+      {
+        id: 'question-3',
+        sequenceNumber: 3,
+        type: 'multiple-select',
+        locale: {
+          en: 'What is class in the CSS MULTI?',
+          de: 'Was ist eine Klasse in CSS?',
+          es: '¿Qué es una clase en CSS?',
+          fr: "Qu'est-ce que la classe en CSS?",
+        },
+        description: {
+          en: 'Choose the correct answer',
+          de: 'Wählen Sie die richtige Antwort aus',
+          es: 'Elige la respuesta correcta',
+          fr: 'Choisissez la réponse correcte',
+        },
+        options: [
+          {
+            id: 'option-1',
+            locale: {
+              en: 'A dog',
+              de: 'Ein Hund',
+              es: 'Un perro',
+              fr: 'Un chien',
+            },
+          },
+          {
+            id: 'option-2',
+            locale: {
+              en: 'A unique styling feature',
+              de: 'Ein einzigartiges Styling-Merkmal',
+              es: 'Una característica de estilo única',
+              fr: 'Une caractéristique de style unique',
+            },
+          },
+          {
+            id: 'option-3',
+            locale: {
+              en: "I don't know",
+              de: 'Ich weiß es nicht',
+              es: 'No lo sé',
+              fr: 'Je ne sais pas',
+            },
+          },
+          {
+            id: 'option-4',
+            locale: {
+              en: 'A part of programming language',
+              de: 'Ein Teil der Programmiersprache',
+              es: 'Una parte del lenguaje de programación',
+              fr: 'Une partie du langage de programmation',
+            },
+          },
+        ],
+      },
     ],
   },
 ];

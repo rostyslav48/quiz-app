@@ -30,9 +30,7 @@ export const QuizQuestion = () => {
         </p>
       </div>
 
-      <div className="quiz-question__options">
-        <QuestionsList questionsCount={questionsCount} question={question} />
-      </div>
+      <QuestionsList questionsCount={questionsCount} question={question} />
     </div>
   );
 };

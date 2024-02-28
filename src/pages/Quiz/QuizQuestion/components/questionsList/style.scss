@@ -6,6 +6,14 @@
     row-gap: 12px;
   }
 
+  &--multiple-select {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    row-gap: 12px;
+    margin-bottom: 70px;
+  }
+
   &__option {
     &--single-select {
       grid-column: 1 / -1;

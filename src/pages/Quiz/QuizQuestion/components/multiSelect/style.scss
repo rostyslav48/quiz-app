@@ -1,0 +1,19 @@
+@import 'styles/utils/vars';
+@import 'styles/utils/mixins';
+
+.multi-select {
+  @include smallHover;
+  width: 100%;
+  padding: 21px 20px;
+  background-color: $card-bg;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__content {
+    font-size: 17px;
+    font-weight: 600;
+    color: $primary-color;
+  }
+}

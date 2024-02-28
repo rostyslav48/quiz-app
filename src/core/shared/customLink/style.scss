@@ -7,6 +7,8 @@
   padding: 20px;
   position: fixed;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
   box-sizing: border-box;
   display: flex;
   justify-content: stretch;
@@ -30,6 +32,9 @@
   }
 
   @include onDesktop {
+    left: initial;
+    transform: none;
     position: relative;
+    margin-inline: auto;
   }
 }
