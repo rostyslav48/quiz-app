@@ -11,6 +11,8 @@ import { CustomLink } from 'core/shared/customLink';
 import { useState } from 'react';
 
 import './style.scss';
+import { SingleSelectImage } from '../singleSelectImage';
+import { BubbleSelect } from '../bubbleSelect';
 
 type Props = {
   question: Question;
@@ -66,6 +68,24 @@ export const QuestionsList: FC<Props> = ({ question, questionsCount }) => {
     setMultiSelectValues((prevState) => [...prevState, option]);
   };
 
+  const handleBubbleSelectChange = (option: Option) => {
+    const isOptionSelected = multiSelectValues.some(
+      ({ id }) => id === option.id,
+    );
+
+    if (isOptionSelected) {
+      setMultiSelectValues((prevState) =>
+        prevState.filter(({ id }) => id !== option.id),
+      );
+
+      return;
+    }
+
+    if (multiSelectValues.length < 3) {
+      setMultiSelectValues((prevState) => [...prevState, option]);
+    }
+  };
+
   const handleMultiSelect = () => {
     saveAnswerToStore(questionId, locale, questionType, multiSelectValues);
   };
@@ -94,6 +114,43 @@ export const QuestionsList: FC<Props> = ({ question, questionsCount }) => {
                   option={option}
                   selectedOptions={multiSelectValues}
                   handleClick={handleMultiSelectChange}
+                />
+              </li>
+            ))}
+          </ul>
+          <CustomLink
+            isDisabled={!multiSelectValues.length}
+            to={`../${path}`}
+            text={t('next')}
+            handleClick={handleMultiSelect}
+          />
+        </>
+      );
+
+    case QuestionTypes.SingleSelectImage:
+      return (
+        <ul className="options-list--single-select-image">
+          {options.map((option) => (
+            <li key={option.id}>
+              <SingleSelectImage
+                option={option}
+                handleClick={handleSingleSelect}
+              />
+            </li>
+          ))}
+        </ul>
+      );
+
+    case QuestionTypes.Bubble:
+      return (
+        <>
+          <ul className="options-list--bubble-select">
+            {options.map((option) => (
+              <li key={option.id}>
+                <BubbleSelect
+                  option={option}
+                  handleClick={handleBubbleSelectChange}
+                  selectedOptions={multiSelectValues}
                 />
               </li>
             ))}

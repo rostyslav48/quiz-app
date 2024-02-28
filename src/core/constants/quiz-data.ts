@@ -128,6 +128,146 @@ export const quizData: QuizData[] = [
           },
         ],
       },
+
+      {
+        id: 'question-4',
+        sequenceNumber: 4,
+        type: 'single-select-image',
+        locale: {
+          en: 'What is your gender?',
+          de: 'Was ist dein Geschlecht?',
+          fr: 'Quel est votre sexe?',
+          es: '¿Cuál es tu género?',
+        },
+        description: {
+          en: 'Please share how do you identify yourself',
+          de: 'Bitte teilen Sie mit, wie Sie sich identifizieren',
+          fr: 'Veuillez partager comment vous vous identifiez',
+          es: 'Por favor, comparte cómo te identificas',
+        },
+        options: [
+          {
+            id: 'option-1',
+            locale: {
+              en: 'Female',
+              de: 'Weiblich',
+              fr: 'Femme',
+              es: 'Mujer',
+            },
+            img: '/img/questions-img/gender-select/female.webp',
+          },
+          {
+            id: 'option-2',
+            locale: {
+              en: 'Male',
+              de: 'Männlich',
+              fr: 'Homme',
+              es: 'Hombre',
+            },
+            img: '/img/questions-img/gender-select/male.webp',
+          },
+          {
+            id: 'option-3',
+            locale: {
+              en: 'Other',
+              de: 'Andere',
+              fr: 'Autre',
+              es: 'Otro',
+            },
+            img: '/img/questions-img/gender-select/other.webp',
+          },
+        ],
+      },
+
+      {
+        id: 'question-5',
+        sequenceNumber: 5,
+        type: 'bubble',
+        locale: {
+          en: 'What are your favorite topics?',
+          de: 'Was sind deine Lieblingsthemen?',
+          fr: 'Quels sont vos sujets préférés?',
+          es: '¿Cuáles son tus temas favoritos?',
+        },
+        description: {
+          en: 'Choose up to 3 topics you like',
+          de: 'Wählen Sie bis zu 3 Themen aus, die Ihnen gefallen',
+          fr: "Choisissez jusqu'à 3 sujets que vous aimez",
+          es: 'Elige hasta 3 temas que te gusten',
+        },
+        options: [
+          {
+            id: 'option-1',
+            locale: {
+              en: 'Werewolf',
+              de: 'Weiblich',
+              fr: 'Femme',
+              es: 'Mujer',
+            },
+            img: '/img/questions-img/favorite-topic/werwolf.webp',
+          },
+          {
+            id: 'option-2',
+            locale: {
+              en: 'Action',
+              de: 'Männlich',
+              fr: 'Homme',
+              es: 'Hombre',
+            },
+            img: '/img/questions-img/favorite-topic/action.webp',
+          },
+          {
+            id: 'option-3',
+            locale: {
+              en: 'Royal obsession',
+              de: 'Königliche Besessenheit',
+              fr: 'Obsession royale',
+              es: 'Obsesión real',
+            },
+            img: '/img/questions-img/favorite-topic/royal-obsession.webp',
+          },
+          {
+            id: 'option-4',
+            locale: {
+              en: 'Billionaires',
+              de: 'Milliardäre',
+              fr: 'Milliardaires',
+              es: 'Billonarios',
+            },
+            img: '/img/questions-img/favorite-topic/billionaires.webp',
+          },
+          {
+            id: 'option-5',
+            locale: {
+              en: 'Romance',
+              de: 'Romantik',
+              fr: 'Romance',
+              es: 'Romance',
+            },
+            img: '/img/questions-img/favorite-topic/romance.webp',
+          },
+          {
+            id: 'option-6',
+            locale: {
+              en: 'Young Adult',
+              de: 'Jugendliche',
+              fr: 'Jeunes Adultes',
+              es: 'Joven Adulto',
+            },
+            img: '/img/questions-img/favorite-topic/young-adult.webp',
+          },
+          {
+            id: 'option-7',
+            locale: {
+              en: 'Bad Boy',
+              de: 'Schlechter Junge',
+              fr: 'Mauvais Garçon',
+              es: 'Chico Malo',
+            },
+            img: '/img/questions-img/favorite-topic/bad-boy.webp',
+          },
+        ],
+      },
     ],
   },
 ];

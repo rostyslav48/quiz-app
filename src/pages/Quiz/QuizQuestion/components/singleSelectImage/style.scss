@@ -1,0 +1,29 @@
+@import 'styles/utils/vars';
+@import 'styles/utils/mixins';
+
+.single-select-image {
+  @include smallHover;
+  @include displayFlexColumnCenter;
+  gap: 10px;
+  background-color: $card-bg;
+  padding: 25px 20px;
+  border-radius: 12px;
+
+  &__img {
+    width: 100%;
+    max-width: 100px;
+    aspect-ratio: 100/100;
+  }
+
+  &__description {
+    color: $primary-color;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  @include onTablet {
+    &__description {
+      font-size: 17px;
+    }
+  }
+}

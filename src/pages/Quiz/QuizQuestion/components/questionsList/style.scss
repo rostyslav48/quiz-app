@@ -1,7 +1,16 @@
+@import 'styles/utils/mixins';
+
 .options-list {
   &--single-select {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 12px;
+    row-gap: 12px;
+  }
+
+  &--single-select-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     row-gap: 12px;
   }
@@ -14,9 +23,25 @@
     margin-bottom: 70px;
   }
 
+  &--bubble-select {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+    row-gap: 12px;
+    & > :nth-child(even) {
+      margin-top: 10px;
+    }
+  }
+
   &__option {
     &--single-select {
       grid-column: 1 / -1;
+    }
+  }
+
+  @include onTablet {
+    &--bubble-select {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
   }
 }

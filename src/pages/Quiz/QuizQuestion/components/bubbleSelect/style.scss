@@ -1,0 +1,35 @@
+@import 'styles/utils/vars';
+@import 'styles/utils/mixins';
+
+.bubble-select {
+  @include displayFlexColumnCenter;
+  gap: 5px;
+  padding: 8px 20px;
+  background-color: $card-bg;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  width: 100%;
+
+  &--active {
+    border: solid 1px $purple-accent;
+  }
+
+  &__img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 30px;
+  }
+
+  &__description {
+    color: $primary-color;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  @include onTablet {
+    &__description {
+      font-size: 17px;
+    }
+  }
+}

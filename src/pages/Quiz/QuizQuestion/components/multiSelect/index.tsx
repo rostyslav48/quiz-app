@@ -1,9 +1,9 @@
 import { Option } from 'core/types/quiz-data.type';
 import { getTestTranslation } from 'core/helpers';
 import { FC } from 'react';
+import { CustomCheckbox } from 'core/shared/customCheckbox';
 
 import './style.scss';
-import { CustomCheckbox } from 'core/shared/customCheckbox';
 
 type Props = {
   option: Option;
