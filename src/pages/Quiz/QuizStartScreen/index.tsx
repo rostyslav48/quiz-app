@@ -1,12 +1,14 @@
 import { useOutletContext } from 'react-router-dom';
 import { getTranslatedData } from 'core/helpers';
 import { QuizData } from 'core/types/quiz-data.type';
-
-import './style.scss';
 import { StorageKeys } from 'core/enums';
 import { CustomLink } from 'core/shared/customLink';
+import { useTranslation } from 'react-i18next';
+
+import './style.scss';
 
 export const QuizStartScreen = () => {
+  const { t } = useTranslation();
   const context: QuizData = useOutletContext();
   const { img, title, description, questions } = context;
   const firstQuestion = questions[0].sequenceNumber;
@@ -28,7 +30,7 @@ export const QuizStartScreen = () => {
           {getTranslatedData(description)}
         </p>
         <div className="quiz-start-screen__questions-number">
-          <span>Questions number:</span>
+          <span>{t('quizStart.questions-number')}</span>
           <span>{questions.length}</span>
         </div>
       </div>
@@ -36,7 +38,7 @@ export const QuizStartScreen = () => {
       <CustomLink
         handleClick={handleTestReset}
         to={firstQuestion.toString()}
-        text="Start Quiz"
+        text={t('quizStart.start')}
       />
     </div>
   );

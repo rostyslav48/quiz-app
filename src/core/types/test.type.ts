@@ -1,7 +1,10 @@
 export interface Answer {
   question: string;
   questionType: string;
-  selectedOptions: string[];
+  selectedOptions: {
+    id: string;
+    answer: string;
+  }[];
 }
 
 export interface Test {

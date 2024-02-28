@@ -3,7 +3,8 @@
     "paths": {
       "core/*": ["./src/core/*"],
       "styles/*": ["./src/styles/*"],
-      "icons/*": ["./src/assets/icons/*"]
+      "icons/*": ["./src/assets/icons/*"],
+      "locales/*": ["./src/locales"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

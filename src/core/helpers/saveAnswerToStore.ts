@@ -15,9 +15,10 @@ export const saveAnswerToStore = (
   const preparedData = {
     question: getTestTranslation(questionLocale),
     questionType,
-    selectedOptions: selectedOptions.map(({ locale }) =>
-      getTestTranslation(locale),
-    ),
+    selectedOptions: selectedOptions.map(({ locale, id }) => ({
+      id: id,
+      answer: getTestTranslation(locale),
+    })),
   };
 
   test[questionId] = preparedData;

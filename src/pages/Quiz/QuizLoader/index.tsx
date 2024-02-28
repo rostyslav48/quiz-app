@@ -3,11 +3,13 @@ import { CircularProgressBar } from 'core/shared/circularProgressBar';
 import './style.scss';
 import { useNavigate } from 'react-router-dom';
 import { Routes } from 'core/enums';
+import { useTranslation } from 'react-i18next';
 
 const CIRCLE_WIDTH = 252;
 
 export const QuizLoader = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [percentage, setPercentage] = useState(0);
   const percentageIntervalRef = useRef<null | number>(null);
 
@@ -31,7 +33,7 @@ export const QuizLoader = () => {
   return (
     <div className="quiz-loader">
       <CircularProgressBar percentage={percentage} circleWidth={CIRCLE_WIDTH} />
-      <h3 className="quiz-loader__title">Finding collections for you...</h3>
+      <h3 className="quiz-loader__title">{t('quizLoader.find-collections')}</h3>
     </div>
   );
 };

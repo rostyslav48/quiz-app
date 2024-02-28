@@ -1,11 +1,13 @@
 import { FC } from 'react';
 import { Option, Question } from 'core/types/quiz-data.type';
-import { QuestionTypes, Routes } from 'core/enums';
+import { QuestionTypes, Routes, StorageKeys } from 'core/enums';
 import { SingleSelect } from '../singleSelect';
-
-import './style.scss';
 import { saveAnswerToStore } from 'core/helpers';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { getTestLanguage } from 'core/helpers';
+
+import './style.scss';
 
 type Props = {
   question: Question;
@@ -14,6 +16,7 @@ type Props = {
 
 export const QuestionsList: FC<Props> = ({ question, questionsCount }) => {
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
 
   const {
     options,
@@ -34,6 +37,11 @@ export const QuestionsList: FC<Props> = ({ question, questionsCount }) => {
 
   const handleSingleSelect = (option: Option) => {
     saveAnswerToStore(questionId, locale, questionType, [option]);
+
+    if (questionId === StorageKeys.TestLocale) {
+      i18n.changeLanguage(getTestLanguage());
+    }
+
     goToNextQuestion();
   };
 

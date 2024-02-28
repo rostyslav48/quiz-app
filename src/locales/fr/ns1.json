@@ -1,0 +1,32 @@
+{
+  "back-home": "Retour à la page d'accueil",
+  "next": "Suivant",
+  "privacy": {
+    "p1": "En continuant, j'accepte la",
+    "p2": "politique de confidentialité",
+    "p3": "et les",
+    "p4": "conditions d'utilisation"
+  },
+
+  "quizResults": {
+    "thank-you": {
+      "p1": "Merci",
+      "p2": "pour votre soutien et pour avoir réussi le quiz"
+    },
+    "download": "Télécharger mes réponses",
+    "retake": "Recommencer"
+  },
+  "quizEmail": {
+    "email": "Email",
+    "enter-email": "Entrez votre email pour accéder à l'intégralité",
+    "your-email": "Votre email",
+    "invalid-email": "Email invalide"
+  },
+  "quizLoader": {
+    "find-collections": "Recherche des collections en cours..."
+  },
+  "quizStart": {
+    "questions-number": "Nombre de questions :",
+    "start": "Commencer le quiz"
+  }
+}
