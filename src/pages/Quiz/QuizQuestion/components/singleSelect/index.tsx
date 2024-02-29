@@ -1,8 +1,8 @@
+import { FC } from 'react';
 import { Option } from 'core/types/quiz-data.type';
 import { getTestTranslation } from 'core/helpers';
 
 import './style.scss';
-import { FC } from 'react';
 
 type Props = {
   option: Option;

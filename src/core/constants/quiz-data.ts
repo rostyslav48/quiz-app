@@ -3,135 +3,23 @@ import { QuizData } from '../types/quiz-data.type';
 export const quizData: QuizData[] = [
   {
     id: 'quiz-1',
-    img: '/img/css-test-img.webp',
+    img: '/img/info-about-yourself-test.webp',
     title: {
-      en: 'CSS knowledge test',
-      de: 'CSS Kenntnistest',
-      es: 'Prueba de conocimientos de CSS',
-      fr: 'Test de connaissances en CSS',
+      en: 'Learn more about yourself',
+      de: 'Erfahren Sie mehr über sich selbst',
+      es: 'Aprende más sobre ti mismo',
+      fr: 'Apprenez-en davantage sur vous-même',
     },
     description: {
-      en: 'Test your CSS expertise with our CSS Knowledge Test. Assess your skills in selectors, properties, layout, and responsiveness. Multiple-choice and coding challenges included',
-      de: 'Testen Sie Ihr CSS-Wissen mit unserem CSS-Kenntnistest. Beurteilen Sie Ihre Fähigkeiten in Selektoren, Eigenschaften, Layout und Responsivität. Multiple-Choice- und Coding-Herausforderungen inklusive.',
-      es: 'Evalúa tu experiencia en CSS con nuestro Test de Conocimientos de CSS. Evalúa tus habilidades en selectores, propiedades, diseño y capacidad de respuesta. Incluye desafíos de opción múltiple y codificación.',
-      fe: 'Testez vos compétences en CSS avec notre Test de Connaissances en CSS. Évaluez vos compétences en sélecteurs, propriétés, mise en page et réactivité. Comprend des défis à choix multiples et de codage.',
+      en: 'Embark on a journey of self-discovery with our captivating quiz! Explore your personality, preferences, and passions to uncover fascinating insights about yourself. Answer thought-provoking questions to reveal the essence of who you are. Gain newfound clarity and insight as you navigate through this enlightening experience. Take our "Discover Yourself" quiz today and unlock the door to self-discovery!',
+      de: 'Begib dich auf eine Reise der Selbstentdeckung mit unserem fesselnden Quiz! Erforsche deine Persönlichkeit, Vorlieben und Leidenschaften, um faszinierende Einblicke in dich selbst zu entdecken. Beantworte nachdenkliche Fragen, um das Wesen dessen zu enthüllen, wer du bist. Gewinne neue Klarheit und Einsicht, während du durch diese erleuchtende Erfahrung navigierst. Mach heute unser "Entdecke dich selbst" Quiz und öffne die Tür zur Selbstentdeckung!',
+      es: '¡Embárcate en un viaje de autodescubrimiento con nuestro cautivador quiz! Explora tu personalidad, preferencias y pasiones para descubrir fascinantes percepciones sobre ti mismo. Responde preguntas estimulantes para revelar la esencia de quién eres. Obtén una nueva claridad y comprensión mientras navegas por esta experiencia iluminadora. ¡Haz nuestro quiz "Descubre tú mismo" hoy y abre la puerta al autodescubrimiento!',
+      fr: `Embarquez dans un voyage de découverte de soi avec notre quiz captivant ! Explorez votre personnalité, vos préférences et vos passions pour découvrir des insights fascinants sur vous-même. Répondez à des questions stimulantes pour révéler l'essence de qui vous êtes. Acquérez une clarté et une compréhension nouvelles alors que vous naviguez à travers cette expérience enrichissante. Prenez notre quiz "Découvrez-vous" aujourd'hui et ouvrez la porte à la découverte de soi !`,
     },
     questions: [
       {
         id: 'question-2',
         sequenceNumber: 2,
-        type: 'single-select',
-        locale: {
-          en: 'What is class in the CSS?',
-          de: 'Was ist eine Klasse in CSS?',
-          es: '¿Qué es una clase en CSS?',
-          fr: "Qu'est-ce que la classe en CSS?",
-        },
-        description: {
-          en: 'Choose the correct answer',
-          de: 'Wählen Sie die richtige Antwort aus',
-          es: 'Elige la respuesta correcta',
-          fr: 'Choisissez la réponse correcte',
-        },
-        options: [
-          {
-            id: 'option-1',
-            locale: {
-              en: 'A dog',
-              de: 'Ein Hund',
-              es: 'Un perro',
-              fr: 'Un chien',
-            },
-          },
-          {
-            id: 'option-2',
-            locale: {
-              en: 'A unique styling feature',
-              de: 'Ein einzigartiges Styling-Merkmal',
-              es: 'Una característica de estilo única',
-              fr: 'Une caractéristique de style unique',
-            },
-          },
-          {
-            id: 'option-3',
-            locale: {
-              en: "I don't know",
-              de: 'Ich weiß es nicht',
-              es: 'No lo sé',
-              fr: 'Je ne sais pas',
-            },
-          },
-          {
-            id: 'option-4',
-            locale: {
-              en: 'A part of programming language',
-              de: 'Ein Teil der Programmiersprache',
-              es: 'Una parte del lenguaje de programación',
-              fr: 'Une partie du langage de programmation',
-            },
-          },
-        ],
-      },
-
-      {
-        id: 'question-3',
-        sequenceNumber: 3,
-        type: 'multiple-select',
-        locale: {
-          en: 'What is class in the CSS MULTI?',
-          de: 'Was ist eine Klasse in CSS?',
-          es: '¿Qué es una clase en CSS?',
-          fr: "Qu'est-ce que la classe en CSS?",
-        },
-        description: {
-          en: 'Choose the correct answer',
-          de: 'Wählen Sie die richtige Antwort aus',
-          es: 'Elige la respuesta correcta',
-          fr: 'Choisissez la réponse correcte',
-        },
-        options: [
-          {
-            id: 'option-1',
-            locale: {
-              en: 'A dog',
-              de: 'Ein Hund',
-              es: 'Un perro',
-              fr: 'Un chien',
-            },
-          },
-          {
-            id: 'option-2',
-            locale: {
-              en: 'A unique styling feature',
-              de: 'Ein einzigartiges Styling-Merkmal',
-              es: 'Una característica de estilo única',
-              fr: 'Une caractéristique de style unique',
-            },
-          },
-          {
-            id: 'option-3',
-            locale: {
-              en: "I don't know",
-              de: 'Ich weiß es nicht',
-              es: 'No lo sé',
-              fr: 'Je ne sais pas',
-            },
-          },
-          {
-            id: 'option-4',
-            locale: {
-              en: 'A part of programming language',
-              de: 'Ein Teil der Programmiersprache',
-              es: 'Una parte del lenguaje de programación',
-              fr: 'Une partie du langage de programmation',
-            },
-          },
-        ],
-      },
-
-      {
-        id: 'question-4',
-        sequenceNumber: 4,
         type: 'single-select-image',
         locale: {
           en: 'What is your gender?',
@@ -175,6 +63,118 @@ export const quizData: QuizData[] = [
               es: 'Otro',
             },
             img: '/img/questions-img/gender-select/other.webp',
+          },
+        ],
+      },
+
+      {
+        id: 'question-3',
+        sequenceNumber: 3,
+        type: 'single-select',
+        locale: {
+          en: 'What is your age?',
+          de: 'Wie alt bist du?',
+          es: '¿Cuál es tu edad?',
+          fr: 'Quel âge as-tu ?',
+        },
+        description: {
+          en: 'Choose the most appropriate age',
+          de: 'Wählen Sie das passendste Alter aus',
+          es: 'Elige la edad más apropiada',
+          fr: "Choisissez l'âge le plus approprié",
+        },
+        options: [
+          {
+            id: 'option-1',
+            locale: {
+              en: '18-20 years',
+              de: '18-20 Jahre',
+              es: '18-20 años',
+              fr: '18-20 ans',
+            },
+          },
+          {
+            id: 'option-2',
+            locale: {
+              en: '30-39 years',
+              de: '30-39 Jahre',
+              es: '30-39 años',
+              fr: '30-39 ans',
+            },
+          },
+          {
+            id: 'option-3',
+            locale: {
+              en: '40-49 years',
+              de: '40-49 Jahre',
+              es: '40-49 años',
+              fr: '40-49 ans',
+            },
+          },
+          {
+            id: 'option-4',
+            locale: {
+              en: '50+',
+              de: '50+',
+              es: '50+',
+              fr: '50+',
+            },
+          },
+        ],
+      },
+
+      {
+        id: 'question-4',
+        sequenceNumber: 4,
+        type: 'multiple-select',
+        locale: {
+          en: 'What do you hate the most in a book?',
+          de: 'Was magst du am wenigsten in einem Buch?',
+          es: '¿Qué es lo que más odias en un libro?',
+          fr: "Qu'est-ce que tu détestes le plus dans un livre ?",
+        },
+        description: {
+          en: 'Choose a few things',
+          de: 'Wähle ein paar Dinge aus',
+          es: 'Elige algunas cosas',
+          fr: 'Choisissez quelques choses',
+        },
+        options: [
+          {
+            id: 'option-1',
+            locale: {
+              en: 'Lack of logic',
+              de: 'Mangel an Logik',
+              es: 'Falta de lógica',
+              fr: 'Manque de logique',
+            },
+          },
+          {
+            id: 'option-2',
+            locale: {
+              en: 'A slow speed',
+              de: 'Eine langsame Geschwindigkeit',
+              es: 'Una velocidad lenta',
+              fr: 'Une vitesse lente',
+            },
+          },
+          {
+            id: 'option-3',
+            locale: {
+              en: 'Lack of humor',
+              de: 'Fehlender Humor',
+              es: 'Falta de humor',
+              fr: "Manque d'humour",
+            },
+          },
+          {
+            id: 'option-4',
+            locale: {
+              en: 'Way too generic ending',
+              de: 'Viel zu generisches Ende',
+              es: 'Final demasiado genérico',
+              fr: 'Fin beaucoup trop générique',
+            },
           },
         ],
       },

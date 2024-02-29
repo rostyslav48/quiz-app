@@ -28,11 +28,10 @@ export const QuizEmail = () => {
   };
 
   return (
-    <div className="quiz-email">
+    <main className="quiz-email">
       <div className="quiz-email__header">
         <h1 className="quiz-email__title">{t('quizEmail.email')}</h1>
         <span className="quiz-email__subtitle">
-          {/* Enter your email to get full access */}
           {t('quizEmail.enter-email')}
         </span>
       </div>
@@ -76,6 +75,6 @@ export const QuizEmail = () => {
         text={t('next')}
         isDisabled={!isEmailCorrect}
       />
-    </div>
+    </main>
   );
 };

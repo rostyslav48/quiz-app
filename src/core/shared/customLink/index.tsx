@@ -22,7 +22,7 @@ export const CustomLink: FC<Props> = ({
   isDisabled = false,
 }) => {
   return (
-    <div className={`${containerClasses} custom-link`}>
+    <div className={`custom-link ${containerClasses}`}>
       <Link
         onClick={handleClick}
         className={classnames('custom-link__button', linkClasses, {

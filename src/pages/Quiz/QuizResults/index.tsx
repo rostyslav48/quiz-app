@@ -4,6 +4,8 @@ import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import { useEffect } from 'react';
 import { CSVLink } from 'react-csv';
 import { useTranslation } from 'react-i18next';
+import { QuizData, Test } from 'core/types';
+import { getTestTranslation } from 'core/helpers';
 
 // Images
 import Success from 'icons/success-icon.svg?react';
@@ -11,8 +13,6 @@ import Download from 'icons/download-icon.svg?react';
 import Arrow from 'icons/arrow-icon.svg?react';
 
 import './style.scss';
-import { QuizData, Test } from 'core/types';
-import { getTestTranslation } from 'core/helpers';
 
 export const QuizResults = () => {
   const navigate = useNavigate();
@@ -52,7 +52,11 @@ export const QuizResults = () => {
 
       <Success className="quiz-results__success" />
 
-      <Link className="quiz-results__back" to={`${Routes.Home}`}>
+      <Link
+        className="quiz-results__back"
+        onClick={handleTestClear}
+        to={`${Routes.Home}`}
+      >
         <Arrow className="quiz-results__back-icon" />
         {t('back-home')}
       </Link>

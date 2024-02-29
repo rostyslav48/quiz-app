@@ -1,10 +1,10 @@
 import { QuizData } from 'core/types/quiz-data.type';
 import { Navigate, useOutletContext, useParams } from 'react-router-dom';
 import { Routes } from 'core/enums';
-
-import './style.scss';
 import { getTestTranslation } from 'core/helpers';
 import { QuestionsList } from './components/questionsList';
+
+import './style.scss';
 
 export const QuizQuestion = () => {
   const context: QuizData = useOutletContext();
@@ -22,7 +22,7 @@ export const QuizQuestion = () => {
   const { locale, description, id } = question;
 
   return (
-    <div className="quiz-question">
+    <main className="quiz-question">
       <div className="quiz-question__header">
         <h1 className="quiz-question__title">{getTestTranslation(locale)}</h1>
         <p className="quiz-question__description">
@@ -35,6 +35,6 @@ export const QuizQuestion = () => {
         questionsCount={questionsCount}
         question={question}
       />
-    </div>
+    </main>
   );
 };

@@ -9,10 +9,10 @@ import { getTestLanguage } from 'core/helpers';
 import { MultiSelect } from '../multiSelect';
 import { CustomLink } from 'core/shared/customLink';
 import { useState } from 'react';
-
-import './style.scss';
 import { SingleSelectImage } from '../singleSelectImage';
 import { BubbleSelect } from '../bubbleSelect';
+
+import './style.scss';
 
 type Props = {
   question: Question;
@@ -38,10 +38,6 @@ export const QuestionsList: FC<Props> = ({ question, questionsCount }) => {
       ? Routes.QuizProcessing
       : (sequenceNumber + 1).toString();
 
-  const goToNextQuestion = () => {
-    navigate(`../${path}`);
-  };
-
   const handleSingleSelect = (option: Option) => {
     saveAnswerToStore(questionId, locale, questionType, [option]);
 
@@ -49,7 +45,7 @@ export const QuestionsList: FC<Props> = ({ question, questionsCount }) => {
       i18n.changeLanguage(getTestLanguage());
     }
 
-    goToNextQuestion();
+    navigate(`../${path}`);
   };
 
   const handleMultiSelectChange = (option: Option) => {

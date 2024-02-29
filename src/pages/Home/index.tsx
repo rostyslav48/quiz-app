@@ -4,12 +4,12 @@ import './style.scss';
 
 export const Home = () => {
   return (
-    <div className="home wrapper">
+    <main className="home wrapper">
       <ul className="home__quiz grid">
         {quizData.map((data) => (
           <QuizCard key={data.id} quizData={data} />
         ))}
       </ul>
-    </div>
+    </main>
   );
 };

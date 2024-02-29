@@ -25,10 +25,6 @@ export default defineConfig({
         find: 'shared',
         replacement: fileURLToPath(new URL('./src/shared', import.meta.url)),
       },
-      {
-        find: 'locales',
-        replacement: fileURLToPath(new URL('./src/locales', import.meta.url)),
-      },
     ],
   },
   plugins: [react(), svgr()],

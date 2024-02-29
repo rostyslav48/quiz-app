@@ -18,7 +18,7 @@ export const QuizStartScreen = () => {
   };
 
   return (
-    <div className="quiz-start-screen">
+    <main className="quiz-start-screen">
       <img
         src={img}
         alt={getTranslatedData(title)}
@@ -40,6 +40,6 @@ export const QuizStartScreen = () => {
         to={firstQuestion.toString()}
         text={t('quizStart.start')}
       />
-    </div>
+    </main>
   );
 };

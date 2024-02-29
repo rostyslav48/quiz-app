@@ -1,7 +1,8 @@
 import { Option } from 'core/types';
-import './style.scss';
 import { FC } from 'react';
 import { getTestTranslation } from 'core/helpers';
+
+import './style.scss';
 
 type Props = {
   option: Option;

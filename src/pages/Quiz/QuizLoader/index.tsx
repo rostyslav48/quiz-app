@@ -33,9 +33,9 @@ export const QuizLoader = () => {
   }, [percentage]);
 
   return (
-    <div className="quiz-loader">
+    <main className="quiz-loader">
       <CircularProgressBar percentage={percentage} circleWidth={CIRCLE_WIDTH} />
       <h3 className="quiz-loader__title">{t('quizLoader.find-collections')}</h3>
-    </div>
+    </main>
   );
 };

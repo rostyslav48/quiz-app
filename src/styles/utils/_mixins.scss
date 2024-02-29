@@ -48,12 +48,6 @@
   }
 }
 
-@mixin displayFlexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @mixin displayFlexColumnCenter {
   display: flex;
   justify-content: center;
