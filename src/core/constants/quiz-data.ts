@@ -275,7 +275,7 @@ export const quizData: QuizData[] = [
     id: 'quiz-2',
     img: '/img/eyes-test.webp',
     title: {
-      en: 'What creature are you?',
+      en: 'What creature you are?',
       de: 'Welche Kreatur bist du?',
       es: '¿Qué criatura eres?',
       fr: 'Quelle créature es-tu ?',
