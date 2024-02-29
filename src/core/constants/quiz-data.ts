@@ -199,7 +199,7 @@ export const quizData: QuizData[] = [
           {
             id: 'option-1',
             locale: {
-              en: 'Werewolf',
+              en: 'Werwolf',
               de: 'Weiblich',
               fr: 'Femme',
               es: 'Mujer',
@@ -265,6 +265,53 @@ export const quizData: QuizData[] = [
               es: 'Chico Malo',
             },
             img: '/img/questions-img/favorite-topic/bad-boy.webp',
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'quiz-2',
+    img: '/img/eyes-test.webp',
+    title: {
+      en: 'What creature are you?',
+      de: 'Welche Kreatur bist du?',
+      es: '¿Qué criatura eres?',
+      fr: 'Quelle créature es-tu ?',
+    },
+    description: {
+      en: 'This test is here only to demonstrate how multiple tests would look like',
+      de: 'Dieser Test dient nur dazu, zu zeigen, wie mehrere Tests aussehen würden',
+      es: 'Esta prueba está aquí solo para demostrar cómo se verían múltiples pruebas',
+      fr: 'Ce test est là uniquement pour montrer à quoi ressembleraient plusieurs tests',
+    },
+    questions: [
+      {
+        id: 'question-2',
+        sequenceNumber: 2,
+        type: 'single-select',
+        locale: {
+          en: 'Finish the test!',
+          de: 'Beende den Test!',
+          es: '¡Termina la prueba!',
+          fr: 'Terminez le test',
+        },
+        description: {
+          en: 'Please share how do you identify yourself',
+          de: 'Bitte teilen Sie mit, wie Sie sich identifizieren',
+          fr: 'Veuillez partager comment vous vous identifiez',
+          es: 'Por favor, comparte cómo te identificas',
+        },
+        options: [
+          {
+            id: 'option-1',
+            locale: {
+              en: 'Finish the test!',
+              de: 'Beende den Test!',
+              es: '¡Termina la prueba!',
+              fr: 'Terminez le test !',
+            },
           },
         ],
       },

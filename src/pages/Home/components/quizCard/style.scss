@@ -3,7 +3,9 @@
 
 .quiz-card {
   @include defaultHover;
-  @include displayFlexColumnCenter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   grid-column: span 4;
   gap: 20px;
   background-color: $card-bg;

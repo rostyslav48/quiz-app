@@ -48,11 +48,13 @@ export const QuizEmail = () => {
           required
         />
 
-        {isErrorShown && (
-          <span className="quiz-email__error">
-            {t('quizEmail.invalid-email')}
-          </span>
-        )}
+        <span
+          className={classnames('quiz-email__error', {
+            'visib--h': !isErrorShown,
+          })}
+        >
+          {t('quizEmail.invalid-email')}
+        </span>
       </div>
 
       <p className="quiz-email__policy">
