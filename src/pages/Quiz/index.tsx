@@ -7,7 +7,7 @@ import { convertToPercents, getTestLanguage } from 'core/helpers';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 
-// Icons
+// Images
 import Arrow from 'icons/arrow-icon.svg?react';
 import Menu from 'icons/menu-icon.svg?react';
 
