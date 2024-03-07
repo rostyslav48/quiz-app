@@ -1,11 +1,15 @@
-import { quizData } from 'core/constants/quiz-data';
 import { Routes } from 'core/enums';
-import { Navigate, Outlet, useNavigate, useParams } from 'react-router-dom';
+import { Outlet, useNavigate, useParams } from 'react-router-dom';
 import { LineProgressBar } from 'core/shared/lineProgressBar';
 import { languagePickQuestion } from 'core/constants/lanquage-pick-question';
 import { convertToPercents, getTestLanguage } from 'core/helpers';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import classnames from 'classnames';
+import { useState } from 'react';
+import { QuizData } from 'core/types';
+import { QuizApi } from 'core/api';
+import { QuizLoader } from './QuizLoader';
 
 // Images
 import Arrow from 'icons/arrow-icon.svg?react';
@@ -17,31 +21,48 @@ export const Quiz = () => {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const { [Routes.QuizId]: id, [Routes.QuestionId]: questionId } = useParams();
-  const currentQuizData = quizData.find((quiz) => quiz.id === id);
+  const [test, setTest] = useState<QuizData | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const isFirstQuestion = questionId && Number(questionId) === 1;
 
   useEffect(() => {
     i18n.changeLanguage(getTestLanguage());
+    setIsLoading(true);
+    QuizApi.getTest(id!)
+      .then((test) =>
+        setTest({
+          ...test,
+          questions: [languagePickQuestion, ...test.questions],
+        }),
+      )
+      .catch(() => navigate(Routes.NotFound))
+      .finally(() => setIsLoading(false));
   }, []);
 
-  if (!currentQuizData) {
-    return <Navigate to={Routes.NotFound} />;
+  const handleBackClick = () => {
+    if (!isFirstQuestion) {
+      navigate(-1);
+    }
+  };
+
+  if (isLoading || !test) {
+    // here we can add some loader
+    return <QuizLoader />;
   }
 
-  const handleBackClick = () => {
-    navigate(-1);
-  };
-
-  const preparedQuizData = {
-    ...currentQuizData,
-    questions: [languagePickQuestion, ...currentQuizData.questions],
-  };
-  const questionsQuantity = preparedQuizData.questions.length;
+  const questionsQuantity = test.questions.length;
 
   return (
     <div className="quiz wrapper">
       <header className="quiz__progress">
         <div className="quiz__nav">
-          <Arrow onClick={handleBackClick} className="quiz__icon-progress" />
+          <Arrow
+            onClick={handleBackClick}
+            className={classnames('quiz__icon-progress', {
+              'is-disabled': isFirstQuestion,
+            })}
+          />
           {questionId && (
             <div>
               <span className="quiz__questionInfo quiz__questionInfo--highlight">
@@ -59,7 +80,7 @@ export const Quiz = () => {
           />
         )}
       </header>
-      <Outlet context={preparedQuizData} />
+      <Outlet context={test} />
     </div>
   );
 };

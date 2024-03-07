@@ -11,6 +11,8 @@
     "interface": "i18next-resources-for-ts interface -i ./src/locales/en -o ./src/@types/resources.d.ts"
   },
   "dependencies": {
+    "axios": "^1.6.7",
+    "axios-mock-adapter": "^1.22.0",
     "classnames": "^2.5.1",
     "i18next-http-backend": "^2.5.0",
     "i18next-resources-for-ts": "^1.5.0",

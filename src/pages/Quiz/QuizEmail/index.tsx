@@ -1,9 +1,12 @@
 import { CustomLink } from 'core/shared/customLink';
-import './style.scss';
 import { useEffect, useState } from 'react';
 import { Routes, StorageKeys } from 'core/enums';
 import classnames from 'classnames';
 import { useTranslation } from 'react-i18next';
+import { Test } from 'core/types';
+import { QuizApi } from 'core/api';
+
+import './style.scss';
 
 const EMAIL_PATTERN = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
@@ -23,8 +26,26 @@ export const QuizEmail = () => {
     }
   }, [email]);
 
-  const handleSaveEmail = () => {
-    localStorage.setItem(StorageKeys.Email, email);
+  const handleSaveEmail = async () => {
+    const testRaw = localStorage.getItem(StorageKeys.Test);
+    const test: Test = testRaw ? JSON.parse(testRaw) : {};
+
+    const preparedEmail = {
+      question: t('quizEmail.email'),
+      questionType: t('quizEmail.email'),
+      selectedOptions: [
+        {
+          id: 'email',
+          answer: email,
+        },
+      ],
+    };
+
+    test.email = preparedEmail;
+
+    localStorage.setItem(StorageKeys.Test, JSON.stringify(test));
+
+    await QuizApi.sendAnswers(test);
   };
 
   return (
