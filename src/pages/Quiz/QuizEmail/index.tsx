@@ -45,7 +45,7 @@ export const QuizEmail = () => {
 
     localStorage.setItem(StorageKeys.Test, JSON.stringify(test));
 
-    await QuizApi.sendAnswers(test);
+    await QuizApi.sendAnswers(test).catch(console.error);
   };
 
   return (

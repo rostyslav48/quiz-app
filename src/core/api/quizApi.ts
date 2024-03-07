@@ -17,21 +17,13 @@ mock.onGet(REQUEST_APIS.QUIZ.TESTS).reply(200, quizData);
 
 export class QuizApi {
   static sendAnswers = async (answers: Test) => {
-    try {
-      const res = await API.post(REQUEST_APIS.QUIZ.ANSWERS, answers);
-      return res.data;
-    } catch (e) {
-      console.error(e);
-    }
+    const res = await API.post(REQUEST_APIS.QUIZ.ANSWERS, answers);
+    return res.data;
   };
 
   static getTests = async () => {
-    try {
-      const res = await API.get(REQUEST_APIS.QUIZ.TESTS);
-      return res.data;
-    } catch (e) {
-      console.error(e);
-    }
+    const res = await API.get(REQUEST_APIS.QUIZ.TESTS);
+    return res.data;
   };
 
   static getTest = async (id: string): Promise<QuizData> => {
