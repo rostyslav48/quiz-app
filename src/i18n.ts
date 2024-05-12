@@ -6,6 +6,7 @@ import enNs1 from './locales/en/ns1.json';
 import deNs1 from './locales/de/ns1.json';
 import frNs1 from './locales/fr/ns1.json';
 import esNs1 from './locales/es/ns1.json';
+import uaNs1 from './locales/ua/ns1.json';
 
 export const defaultNS = 'ns1';
 export const resources = {
@@ -20,6 +21,9 @@ export const resources = {
   },
   es: {
     ns1: esNs1,
+  },
+  ua: {
+    ns1: uaNs1,
   },
 } as const;
 

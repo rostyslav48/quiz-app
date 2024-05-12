@@ -3,4 +3,5 @@ export enum Locale {
   German = 'de',
   French = 'fr',
   Spanish = 'es',
+  Ukrainian = 'ua',
 }

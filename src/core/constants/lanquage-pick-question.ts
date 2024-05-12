@@ -35,5 +35,11 @@ export const languagePickQuestion: Question = {
         en: 'Spanish',
       },
     },
+    {
+      id: 'ua',
+      locale: {
+        en: 'Ukrainian',
+      },
+    },
   ],
 };

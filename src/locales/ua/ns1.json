@@ -1,0 +1,32 @@
+{
+  "back-home": "На головну",
+  "next": "Далі",
+  "privacy": {
+    "p1": "Продовжуючи, я погоджуюсь з",
+    "p2": "Privacy policy",
+    "p3": "та",
+    "p4": "Terms of use"
+  },
+  "notFound": "Не знайдено",
+  "quizResults": {
+    "thank-you": {
+      "p1": "Дякую вам",
+      "p2": "за підтримку та проходження вікторини"
+    },
+    "download": "Заваднажити мої відповіді",
+    "retake": "Перепройти"
+  },
+  "quizEmail": {
+    "email": "Email",
+    "enter-email": "Введіть свій Email щоб отримати доступ до відповідей",
+    "your-email": "Ваш Email",
+    "invalid-email": "Невалідний Email"
+  },
+  "quizLoader": {
+    "find-collections": "Шукаємо колекції для вас..."
+  },
+  "quizStart": {
+    "questions-number": "Кількість запитань:",
+    "start": "Розпочати Вікторину"
+  }
+}
