@@ -19,7 +19,6 @@ export const QuizResults = () => {
   const { t } = useTranslation();
 
   const { title }: QuizData = useOutletContext();
-  const email = localStorage.getItem(StorageKeys.Email);
   const testRaw = localStorage.getItem(StorageKeys.Test);
   const test: Test = testRaw ? JSON.parse(testRaw) : {};
 
@@ -32,7 +31,11 @@ export const QuizResults = () => {
   }));
 
   useEffect(() => {
-    if (!email) {
+    if (!Object.keys(test).length) {
+      navigate(`../${Routes.NotFound}`);
+    }
+
+    if (!test.email) {
       navigate(`../${Routes.QuizEmail}`);
     }
   }, []);
